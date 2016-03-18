@@ -11,6 +11,10 @@ formatted_time = current_time.strftime("%A %B/%d/%Y at %I:%M%p")
 puts "funding check started at #{formatted_time}"
 
 
-puts "\n projects: \n\t project #{project0.ljust(30, '.')} has $#{funds0} of funds
- \n\t project #{project1.ljust(30, '.')} has $#{funds1} of funds
- \n\t project #{project2.ljust(30, '.')} has $#{funds2} of funds"
+def funds_check(subject,amount=0)
+  puts "project #{subject.ljust(30, '.')} has $#{amount} of funds"
+end
+
+puts funds_check(project0,funds0)
+puts funds_check(project1)
+puts funds_check(project2,funds2)
