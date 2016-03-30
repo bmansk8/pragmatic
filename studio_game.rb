@@ -49,26 +49,38 @@ player_name0 = "larry"
 player_name1 = "curly"
 player_name2 = "moe"
 player_name3 = "shemp"
+player_name4 = "shreck himself xD"
 
 health0 = 60
 health1 = 125
 health2 = 100
+health4 = 1000000000
 
 score0 = 0
 score1 = 0
 score2 = 0
+score4 = 1000000000
 
 player0 = Game.new(player_name0,health0,score0)
 player1 = Game.new(player_name1,health1,score1)
 player2 = Game.new(player_name2,health2,score2)
 player3 = Game.new(player_name3)
+player4 = Game.new(player_name4,health4,score4)
 
-puts player0
-puts player1
-puts player2
-puts player3
-player3.blammed
-player0.w00t
-player0.rase_score
-player2.norm_plr
-puts player2
+players = [player0,player1,player2,player3]
+
+puts "there are #{players.size} players today"
+
+players.pop
+players.<< player4
+
+players.each do |plr|
+  puts plr
+end
+
+players.each do |plr|
+  plr.blammed
+  plr.blammed
+  plr.w00t
+  puts plr
+end
