@@ -1,8 +1,9 @@
-class Movie
+# .push adds the next object into the next avaliable space int the array
+# .<< adds the object to the end of the array
+# .size tells us the size
+# .pop removes the last object in the array
 
-  # readable attr_reader :title , :rank
-  # writable attr_writer :title , :rank
-  #does both | attr_accessor
+class Movie
 
     attr_accessor :title , :rank
 
@@ -32,12 +33,14 @@ class Movie
 
 end
 
+
 movie1 = Movie.new("goonies", 10)
 movie2 = Movie.new("ghost busters", 9)
 movie3 = Movie.new("gold finger")
 
-puts movie1
-movie2.thumbs_down
-puts movie2
-puts movie3.norm_rank
-movie3.thumbs_up
+movies [movie1,movie2,movie3]
+
+movies.each do |m|
+  m.thumbs_up
+  puts m
+end
