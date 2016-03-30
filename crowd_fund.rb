@@ -1,23 +1,27 @@
 class Crowd_Fund
 
+    attr_accessor :subject , :amount , :goal
+
     def initialize(subject,amount=100,goal=105)
         @subject = subject
         @amount = amount
         @goal = goal
+        @reach_goal = goal-amount
     end
 
     def to_s
-        "project #{@subject} has $#{@amount} of funds and has a goal of#{@goal}"
+        "project #{@subject} has $#{@amount}$ of funds and has a goal of#{@goal}$
+        with #{@reach_goal}$ left to reach its goal"
     end
 
     def gain_funds
         @amount +=100
-        "project #{@subject} now has #{@amount} dollars of funds"
+      puts  "project #{@subject} now has #{@amount}$ dollars of funds"
     end
 
     def loose_funds
         @amount -=100
-        "project #{@subject} now has #{@amount} dollars of funds"
+      puts  "project #{@subject} now has #{@amount}$ dollars of funds"
     end
 
 end
@@ -46,9 +50,7 @@ project2= Crowd_Fund.new(project2_name,funds2,goal2)
 puts project0
 puts project1
 puts project2
-
 3.times do
 project2.gain_funds
 end
-
 project2.loose_funds
