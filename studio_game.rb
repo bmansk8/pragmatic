@@ -45,27 +45,17 @@ current_time = Time.new
 formatted_time = current_time.strftime("%A %B/%d/%Y at %I:%M%p")
 puts "The game started on #{formatted_time}"
 
-player_name0 = "larry"
-player_name1 = "curly"
-player_name2 = "moe"
-player_name3 = "shemp"
-player_name4 = "shreck himself xD"
+score = [score0 = 0,score1 = 0,score2 = 0,score4 = 1000000000]
 
-health0 = 60
-health1 = 125
-health2 = 100
-health4 = 1000000000
+health = [health0 = 60,health1 = 125,health2 = 100,health4 = 1000000000]
 
-score0 = 0
-score1 = 0
-score2 = 0
-score4 = 1000000000
+player_names = [player_name0 = "larry",player_name1 = "curly",player_name2 = "moe",player_name3 = "shemp",player_name4 = "shreck himself xD"]
 
-player0 = Game.new(player_name0,health0,score0)
-player1 = Game.new(player_name1,health1,score1)
-player2 = Game.new(player_name2,health2,score2)
-player3 = Game.new(player_name3)
-player4 = Game.new(player_name4,health4,score4)
+player0 = Game.new(player_names[0],health[0],score[0])
+player1 = Game.new(player_names[1],health[1],score[1])
+player2 = Game.new(player_names[2],health[2],score[2])
+player3 = Game.new(player_names[3])
+player4 = Game.new(player_names[4],health[3],score[3])
 
 players = [player0,player1,player2,player3]
 
