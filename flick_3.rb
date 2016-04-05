@@ -38,7 +38,7 @@ movie1 = Movie.new("goonies", 10)
 movie2 = Movie.new("ghost busters", 9)
 movie3 = Movie.new("gold finger")
 
-movies [movie1,movie2,movie3]
+movies = [movie1,movie2,movie3]
 
 movies.each do |m|
   m.thumbs_up
