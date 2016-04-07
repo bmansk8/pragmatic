@@ -1,8 +1,3 @@
-# .push adds the next object into the next avaliable space int the array
-# .<< adds the object to the end of the array
-# .size tells us the size
-# .pop removes the last object in the array
-
 class Movie
 
     attr_accessor :title , :rank
@@ -33,14 +28,42 @@ class Movie
 
 end
 
+class PlayList
 
-movie1 = Movie.new("goonies", 10)
-movie2 = Movie.new("ghost busters", 9)
-movie3 = Movie.new("gold finger")
+  def initialize(name)
+    @name=name
+    @movies = []
+  end
 
-movies = [movie1,movie2,movie3]
+  def add_movie(movie)
+    @movies << movie
+  end
 
-movies.each do |m|
-  m.thumbs_up
-  puts m
+  def play
+    puts "#{@name}'s playlist:"
+    puts @movies
+
+      @movies.each do |movie|
+        movie.thumbs_up
+        puts movie1
+      end
+    end
+
 end
+
+movie1= Movie.new("goonies",10)
+movie1= Movie.new("ghostbusters",8)
+movie1= Movie.new("goldfinger")
+movie4= Movie.new("gremlins",15)
+
+
+playlist1 = PlayList.new("kermit")
+playlist1.add_movie(movie1)
+playlist1.add_movie(movie2)
+playlist1.add_movie(movie3)
+playlist1.play
+
+playlist2 = Playlist.new("fozzie")
+playlist2.add_movie(movie3)
+playlist2.add_movie(movie4)
+playlist2.play
