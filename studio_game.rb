@@ -41,6 +41,37 @@ class Game
 
 end
 
+
+class GameList
+
+  attr_accessor :title
+
+  def initialize(title)
+    @title = title
+    @players = []
+  end
+
+  def add_player(player)
+    @players << player
+  end
+
+  def play
+
+    @players.each do |player|
+      puts player
+    end
+
+    @players.each do |player|
+      player.blammed
+      player.w00t
+      player.w00t
+      puts player
+    end
+  end
+
+end
+
+
 current_time = Time.new
 formatted_time = current_time.strftime("%A %B/%d/%Y at %I:%M%p")
 puts "The game started on #{formatted_time}"
@@ -49,7 +80,7 @@ score = [score0 = 0,score1 = 0,score2 = 0,score4 = 1000000000]
 
 health = [health0 = 60,health1 = 125,health2 = 100,health4 = 1000000000]
 
-player_names = [player_name0 = "larry",player_name1 = "curly",player_name2 = "moe",player_name3 = "shemp",player_name4 = "shreck himself xD"]
+player_names = [name0 = "larry",name1 = "curly",name2 = "moe",name3 = "shemp",name4 = "shreck himself xD"]
 
 player0 = Game.new(player_names[0],health[0],score[0])
 player1 = Game.new(player_names[1],health[1],score[1])
@@ -57,20 +88,17 @@ player2 = Game.new(player_names[2],health[2],score[2])
 player3 = Game.new(player_names[3])
 player4 = Game.new(player_names[4],health[3],score[3])
 
-players = [player0,player1,player2,player3]
+players = [player0,player1,player2,player3,player4]
 
-puts "there are #{players.size} players today"
+blamOrW00t =  GameList.new("blamOrW00t")
+puts blamOrW00t.title
+blamOrW00t.add_player(players[4])
+blamOrW00t.add_player(players[2])
+blamOrW00t.add_player(players[0])
+blamOrW00t.play
 
-players.pop
-players.<< player4
-
-players.each do |plr|
-  puts plr
-end
-
-players.each do |plr|
-  plr.blammed
-  plr.blammed
-  plr.w00t
-  puts plr
-end
+blamOrW00t2 =  GameList.new("blamOrW00tv2")
+puts blamOrW00t2.title
+blamOrW00t2.add_player(players[2])
+blamOrW00t2.add_player(players[1])
+blamOrW00t2.play
